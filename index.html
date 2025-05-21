@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="We present, EgoZero, a minimal system that trains zero-shot robot policies on in-the-wild egocentric human data without any robot data">   
+        content="We present EgoZero, a minimal system that trains zero-shot robot policies on in-the-wild egocentric human data without any robot data">   
   <meta name="keywords" content="Imitation Learning, Robot Learning, Human Data"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EgoZero</title>
@@ -60,7 +60,7 @@
         <div class="column has-text-centered">
           <!-- Title -->
           <h1 class="title is-1 publication-title">
-            <span style="color:#d35400; font-weight:bold;">E</span>go<span style="color:#d35400; font-weight:bold;">Z</span>ero:
+            <span style="color:#ff9d0b; font-weight:bold;">E</span>go<span style="color:#ff9d0b; font-weight:bold;">Z</span>ero:
             <br>
             <span class="is-size-2">Robot Learning from Smart Glasses</span>
           </h1>
@@ -97,8 +97,7 @@
             <div class="publication-links">
               <!-- Paper PDF -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2410.07554"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
@@ -106,8 +105,7 @@
 
               <!-- arXiv -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2410.07554"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
@@ -169,7 +167,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Despite recent progress in general purpose robotics, robot policies still lag far behind basic human capabilities in the real world. Humans constantly interact with the physical world, yet this rich data resource remains largely untapped in robot learning. We propose \method{}, a minimal system that learns robust manipulation policies from human demonstrations captured with Project Aria smart glasses, <strong>and zero robot data</strong>. EgoZero enables: (1) extraction of complete, robot-executable actions from in-the-wild, egocentric, human demonstrations, (2) compression of human visual observations into morphology-agnostic state representations, and (3) closed-loop policy learning that generalizes morphologically, spatially, and semantically. We deploy EgoZero policies on a gripper Franka Panda robot and demonstrate zero-shot transfer with 70% success rate over 7 manipulation tasks and only 20 minutes of data collection per task. Our results suggest that in-the-wild human data can serve as a scalable foundation for real-world robot learning — paving the way toward a future of abundant, diverse, and naturalistic training data for robots.
+            Despite recent progress in general purpose robotics, robot policies still lag far behind basic human capabilities in the real world. Humans constantly interact with the physical world, yet this rich data resource remains largely untapped in robot learning. We propose EgoZero, a minimal system that learns robust manipulation policies from human demonstrations captured with Project Aria smart glasses, <strong>and zero robot data</strong>. EgoZero enables: (1) extraction of complete, robot-executable actions from in-the-wild, egocentric, human demonstrations, (2) compression of human visual observations into morphology-agnostic state representations, and (3) closed-loop policy learning that generalizes morphologically, spatially, and semantically. We deploy EgoZero policies on a gripper Franka Panda robot and demonstrate zero-shot transfer with 70% success rate over 7 manipulation tasks and only 20 minutes of data collection per task. Our results suggest that in-the-wild human data can serve as a scalable foundation for real-world robot learning — paving the way toward a future of abundant, diverse, and naturalistic training data for robots.
           </p>
         </div>
 
@@ -213,10 +211,9 @@
 </section>
 <!--/ Overview. -->
 <!-- Method -->
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Method</h2>
-<!-- 
     Tactile Data Collection
     <div class="content">
       <h3 class="title is-4">1. Tactile Data Collection</h3>
@@ -233,9 +230,9 @@
           The sensor data is sampled at 200Hz and downsampled to align with 30Hz visual frames. The resulting force readings are used to supervise a policy trained entirely on human demonstrations, without requiring robot data.
         </p>
       </details>
-    </div> -->
+    </div>
 
-</section>
+</section> -->
 <!--/ Method -->
 
 
@@ -246,22 +243,22 @@
 
     <!-- FTF Performance with Toggle Videos -->
     <div class="content">
-      <h3 class="title is-4">1. Task rollouts</h3>
+      <h3 class="title is-4">Task Rollouts</h3>
       <div class="tabs is-centered is-boxed" id="aria-video-tabs">
         <ul>
-          <li class="is-active" data-target="video-oven"><a>Open Oven</a></li>
+          <li class="is-active" data-target="video-oven"><a>Open oven door</a></li>
           <li data-target="video-bread"><a>Put bread in plate</a></li>
           <li data-target="video-board"><a>Erase board</a></li>
-          <li data-target="video-fruit"><a>Sort fruit</a></li>
+          <li data-target="video-fruit"><a>Sort fruit in bowl</a></li>
           <li data-target="video-fold"><a>Fold towel</a></li>
-          <li data-target="video-insert"><a>Insert book</a></li>
+          <li data-target="video-insert"><a>Insert book in shelf</a></li>
         </ul>
       </div>
 
       <div id="aria-video-display">
           <div class="video-content is-active" id="video-oven">
               <!-- Rollout 1 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
@@ -270,7 +267,7 @@
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_robot_1.mp4" type="video/mp4">
                 </video>
@@ -278,16 +275,16 @@
             </div>
 
             <!-- Rollout 2 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_robot_2.mp4" type="video/mp4">
                 </video>
@@ -295,16 +292,16 @@
             </div>
 
             <!-- Rollout 3 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_robot_3.mp4" type="video/mp4">
                 </video>
@@ -314,7 +311,7 @@
 
           <div class="video-content" id="video-bread">
               <!-- Rollout 1 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
@@ -323,7 +320,7 @@
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_robot_1.mp4" type="video/mp4">
                 </video>
@@ -331,16 +328,16 @@
             </div>
 
             <!-- Rollout 2 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_robot_2.mp4" type="video/mp4">
                 </video>
@@ -348,16 +345,16 @@
             </div>
 
             <!-- Rollout 3 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/bread_robot_3.mp4" type="video/mp4">
                 </video>
@@ -367,7 +364,7 @@
 
           <div class="video-content" id="video-board">
               <!-- Rollout 1 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
@@ -376,7 +373,7 @@
                 </video> 
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/erase_board_robot_1.mp4" type="video/mp4">
                 </video>
@@ -384,16 +381,16 @@
             </div>
 
             <!-- Rollout 2 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/erase_board_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/erase_board_robot_2.mp4" type="video/mp4">
                 </video>
@@ -401,16 +398,16 @@
             </div>
 
             <!-- Rollout 3 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/erase_board_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/erase_board_robot_3.mp4" type="video/mp4">
                 </video>
@@ -420,7 +417,7 @@
 
           <div class="video-content" id="video-fruit">
               <!-- Rollout 1 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
@@ -429,39 +426,39 @@
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/sort_fruit_robot_1.mp4" type="video/mp4">
                 </video>  
               </div>
             </div>
             <!-- Rollout 2 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/sort_fruit_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/sort_fruit_robot_2.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
             <!-- Rollout 3 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/sort_fruit_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/sort_fruit_robot_3.mp4" type="video/mp4">
                 </video>
@@ -471,7 +468,7 @@
 
           <div class="video-content" id="video-fold">
               <!-- Rollout 1 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
@@ -480,39 +477,39 @@
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/fold_towel_robot_1.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
             <!-- Rollout 2 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/fold_towel_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/fold_towel_robot_2.mp4" type="video/mp4">
                 </video>  
               </div>  
             </div>
             <!-- Rollout 3 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/fold_towel_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/fold_towel_robot_3.mp4" type="video/mp4">
                 </video>
@@ -522,7 +519,7 @@
 
           <div class="video-content" id="video-insert">
               <!-- Rollout 1 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
@@ -531,39 +528,39 @@
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/put_book_robot_1.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
             <!-- Rollout 2 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 2</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/put_book_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/put_book_robot_2.mp4" type="video/mp4">
                 </video>
               </div>  
             </div>
             <!-- Rollout 3 -->
-            <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4>
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 3</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
+                <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/put_book_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
-                <p class="subtitle is-6">Robot Manipulation</p>
+                <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
                   <source src="./static/videos/put_book_robot_3.mp4" type="video/mp4">
                 </video>
@@ -577,10 +574,10 @@
 
     <!-- Comparison to Baselines -->
     <div class="content">
-      <h3 class="title is-4" style="margin-top: 3rem; margin-bottom: 1.5rem;">2. Baselines and Ablations</h3>
+      <h3 class="title is-4" style="margin-top: 3rem; margin-bottom: 1.5rem;">Baselines and Ablations</h3>
 
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-fullwidth">
           <div class="table-container">
             <table class="table is-fullwidth">
               <tbody>
@@ -667,7 +664,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{place holder,
   title     = {Place holder},
-  author    = {Place holder},
+  author    = {Vincent Liu and Ademi Adeniji and Haotian Zhan and Raunaq Bhirangi and Pieter Abbeel and Lerrel Pinto},
   journal   = {Place holder},
   year      = {2025}
 }</code></pre>
@@ -675,7 +672,7 @@
 </section>
 
 
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
@@ -690,7 +687,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 </body>
 
