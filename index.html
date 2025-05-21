@@ -62,7 +62,7 @@
           <h1 class="title is-1 publication-title">
             <span style="font-weight:bold">EgoZero</span>
             <br>
-            <span class="is-size-2">Robot Learning from Smart Glasses</span>
+            <span style="font-weight:bold">Robot Learning from Smart Glasses</span>
           </h1>
 
           <!-- Conference -->
@@ -166,7 +166,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Despite recent progress in general purpose robotics, robot policies still lag far behind basic human capabilities in the real world. Humans constantly interact with the physical world, yet this rich data resource remains largely untapped in robot learning. <strong>We propose EgoZero, a minimal system that learns robust manipulation policies from human demonstrations captured with Project Aria smart glasses, and zero robot data</strong>. EgoZero enables: (1) extraction of complete, robot-executable actions from in-the-wild, egocentric, human demonstrations, (2) compression of human visual observations into morphology-agnostic state representations, and (3) closed-loop policy learning that generalizes morphologically, spatially, and semantically. We deploy EgoZero policies on a gripper Franka Panda robot and demonstrate zero-shot transfer with 70% success rate over 7 manipulation tasks and only 20 minutes of data collection per task. Our results suggest that in-the-wild human data can serve as a scalable foundation for real-world robot learning — paving the way toward a future of abundant, diverse, and naturalistic training data for robots.
+            Despite recent progress in general purpose robotics, robot policies still lag far behind basic human capabilities in the real world. Humans constantly interact with the physical world, yet this rich data resource remains largely untapped in robot learning. <strong>We propose EgoZero, a minimal system that learns robust manipulation policies from human demonstrations captured with Project Aria smart glasses, and zero robot data.</strong> EgoZero enables: (1) extraction of complete, robot-executable actions from in-the-wild, egocentric, human demonstrations, (2) compression of human visual observations into morphology-agnostic state representations, and (3) closed-loop policy learning that generalizes morphologically, spatially, and semantically. We deploy EgoZero policies on a gripper Franka Panda robot and demonstrate zero-shot transfer with 70% success rate over 7 manipulation tasks and only 20 minutes of data collection per task. Our results suggest that in-the-wild human data can serve as a scalable foundation for real-world robot learning — paving the way toward a future of abundant, diverse, and naturalistic training data for robots.
           </p>
         </div>
 
@@ -255,20 +255,20 @@
       </div>
 
       <div id="aria-video-display">
-          <div class="video-content is-active" id="video-oven">
+          <div class="video-content" id="video-oven">
               <!-- Rollout 1 -->
             <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_human_1.mp4" type="video/mp4">
+                  <source src="./static/videos/open_oven_human_1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_robot_1.mp4" type="video/mp4">
+                  <source src="./static/videos/open_oven_robot_1.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -279,13 +279,13 @@
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_human_2.mp4" type="video/mp4">
+                  <source src="./static/videos/open_oven_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_robot_2.mp4" type="video/mp4">
+                  <source src="./static/videos/open_oven_robot_2.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -296,32 +296,32 @@
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_human_3.mp4" type="video/mp4">
+                  <source src="./static/videos/open_oven_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_robot_3.mp4" type="video/mp4">
+                  <source src="./static/videos/open_oven_robot_3.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
           </div>
 
-          <div class="video-content" id="video-bread">
+          <div class="video-content is-active" id="video-bread">
               <!-- Rollout 1 -->
             <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
             <div class="columns is-vcentered">
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Human Demonstration</p>
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_human_1.mp4" type="video/mp4">
+                  <source src="./static/videos/pick_bread_human_1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
                 <p class="subtitle is-6">Robot Inference</p>
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_robot_1.mp4" type="video/mp4">
+                  <source src="./static/videos/pick_bread_robot_1.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -332,13 +332,13 @@
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_human_2.mp4" type="video/mp4">
+                  <source src="./static/videos/pick_bread_human_2.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_robot_2.mp4" type="video/mp4">
+                  <source src="./static/videos/pick_bread_robot_2.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -349,13 +349,13 @@
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Human Demonstration</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_human_3.mp4" type="video/mp4">
+                  <source src="./static/videos/pick_bread_human_3.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column has-text-centered">
                 <!-- <p class="subtitle is-6">Robot Inference</p> -->
                 <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/bread_robot_3.mp4" type="video/mp4">
+                  <source src="./static/videos/pick_bread_robot_3.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
