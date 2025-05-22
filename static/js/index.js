@@ -32,20 +32,18 @@ $(document).ready(function() {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll("#aria-video-tabs li");
-    const contents = document.querySelectorAll(".video-content");
-
+  document.querySelectorAll(".content").forEach(section => {
+    const tabs = section.querySelectorAll(".tabs li");
+    const contents = section.querySelectorAll(".video-content");
     tabs.forEach(tab => {
       tab.addEventListener("click", function () {
-        // 1. 切换 tab 样式
         tabs.forEach(t => t.classList.remove("is-active"));
         tab.classList.add("is-active");
-
-        // 2. 显示对应内容
         const targetId = tab.getAttribute("data-target");
         contents.forEach(c => c.classList.remove("is-active"));
-        document.getElementById(targetId).classList.add("is-active");
+        const target = section.querySelector(`#${targetId}`);
+        if (target) target.classList.add("is-active");
       });
     });
   });
-
+});
