@@ -242,200 +242,6 @@
 
     <!-- FTF Performance with Toggle Videos -->
     <div class="content">
-      <h3 class="title is-4">Object Generalization</h3>
-      <div class="tabs is-centered is-boxed" id="aria-video-tabs">
-        <ul>
-          <li class="is-active" data-target="video-oven"><a>Open oven door</a></li>
-          <li data-target="video-bread"><a>Put bread in plate</a></li>
-          <li data-target="video-board"><a>Erase board</a></li>
-          <li data-target="video-fold"><a>Fold towel</a></li>
-        </ul>
-      </div>
-
-      <div id="aria-video-display">
-          <div class="video-content" id="video-oven">
-              <!-- Rollout 1 -->
-            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
-            <div class="columns is-vcentered">
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/open_oven_human_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Training Object</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/open_oven_robot_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">New Object</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/open_oven_robot_generalization.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-
-          <div class="video-content is-active" id="video-bread">
-              <!-- Rollout 1 -->
-            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
-            <div class="columns is-vcentered">
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/pick_bread_human_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Training Object</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/pick_bread_robot_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">New Object</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/pick_bread_robot_generalization.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-
-          <div class="video-content" id="video-board">
-              <!-- Rollout 1 -->
-            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
-            <div class="columns is-vcentered">
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
-                <video class="fixed-video" controls autoplay muted loop playsinline>
-                  <source src="./static/videos/erase_board_human_1.mp4" type="video/mp4">
-                </video> 
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Training Object</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/erase_board_robot_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">New Object</p>
-                <video class="fixed-video" controls autoplay muted loop playsinline>
-                  <source src="./static/videos/erase_board_robot_generalization.mp4" type="video/mp4">
-                </video> 
-              </div>
-            </div>
-
-          <div class="video-content" id="video-fold">
-              <!-- Rollout 1 -->
-            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
-            <div class="columns is-vcentered">
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Human Demonstration</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/fold_towel_human_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">Training Object</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/fold_towel_robot_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column has-text-centered">
-                <p class="subtitle is-6">New Object</p>
-                <video controls autoplay muted loop playsinline width="100%">
-                  <source src="./static/videos/fold_towel_robot_generalization.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-      </div>
-    </div>
-
-    <!-- Comparison to Baselines -->
-    <div class="content">
-      <h3 class="title is-4" style="margin-top: 3rem; margin-bottom: 1.5rem;">Baselines and Ablations</h3>
-
-      <div class="columns is-centered">
-        <div class="column is-fullwidth">
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <tbody>
-                <tr>
-                  <th class="border-right"></th>
-                  <th class="has-text-centered">Open oven</th>
-                  <th class="has-text-centered">Pick bread</th>
-                  <th class="has-text-centered">Sweep broom</th>
-                  <th class="has-text-centered">Erase board</th>
-                  <th class="has-text-centered">Sort fruit</th>
-                  <th class="has-text-centered">Fold towel</th>
-                  <th class="has-text-centered border-right">Insert book</th>
-                </tr>
-
-                <tr class="tr-thick-top">
-                  <th class="border-right">From vision</th>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered border-right">0/15</td>
-                </tr>
-
-                <tr>
-                  <th class="border-right">From affordances</th>
-                  <td class="has-text-centered">12/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">7/15</td>
-                  <td class="has-text-centered">10/15</td>
-                  <td class="has-text-centered border-right">5/15</td>
-                </tr>
-
-                <tr class="tr-thick-top">
-                  <th class="border-right">EgoZero – 3D augmentations</th>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered border-right">0/15</td>
-                </tr>
-
-                <tr>
-                  <th class="border-right">EgoZero – triangulated depth</th>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">11/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered">0/15</td>
-                  <td class="has-text-centered border-right">0/15</td>
-                </tr>
-
-                <tr class="tr-thick-top">
-                  <th class="border-right"><b>EgoZero</b></th>
-                  <td class="has-text-centered"><b>13/15</b></td>
-                  <td class="has-text-centered"><b>12/15</b></td>
-                  <td class="has-text-centered"><b>9/15</b></td>
-                  <td class="has-text-centered"><b>11/15</b></td>
-                  <td class="has-text-centered"><b>10/15</b></td>
-                  <td class="has-text-centered"><b>15/15</b></td>
-                  <td class="has-text-centered border-right"><b>9/15</b></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <p>Success rates for all baselines and ablations. All models were trained on the same 100 demonstrations per task, and evaluated on zero-shot object poses (unseen from training), cameras (iPhone vs Aria), and environment (robot workspace vs in-the-wild). Because of limited prior work in our exact zero-shot in-the-wild setting, we cite the closest work for each baseline.</p>
-
-    </div>
-
-    <!-- FTF Performance with Toggle Videos -->
-    <div class="content">
       <h3 class="title is-4">Task Rollouts</h3>
       <div class="tabs is-centered is-boxed" id="aria-video-tabs">
         <ul>
@@ -761,6 +567,200 @@
             </div>
           </div>
 
+      </div>
+    </div>
+
+    <!-- Comparison to Baselines -->
+    <div class="content">
+      <h3 class="title is-4" style="margin-top: 3rem; margin-bottom: 1.5rem;">Baselines and Ablations</h3>
+
+      <div class="columns is-centered">
+        <div class="column is-fullwidth">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <tbody>
+                <tr>
+                  <th class="border-right"></th>
+                  <th class="has-text-centered">Open oven</th>
+                  <th class="has-text-centered">Pick bread</th>
+                  <th class="has-text-centered">Sweep broom</th>
+                  <th class="has-text-centered">Erase board</th>
+                  <th class="has-text-centered">Sort fruit</th>
+                  <th class="has-text-centered">Fold towel</th>
+                  <th class="has-text-centered border-right">Insert book</th>
+                </tr>
+
+                <tr class="tr-thick-top">
+                  <th class="border-right">From vision</th>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered border-right">0/15</td>
+                </tr>
+
+                <tr>
+                  <th class="border-right">From affordances</th>
+                  <td class="has-text-centered">12/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">7/15</td>
+                  <td class="has-text-centered">10/15</td>
+                  <td class="has-text-centered border-right">5/15</td>
+                </tr>
+
+                <tr class="tr-thick-top">
+                  <th class="border-right">EgoZero – 3D augmentations</th>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered border-right">0/15</td>
+                </tr>
+
+                <tr>
+                  <th class="border-right">EgoZero – triangulated depth</th>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">11/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered">0/15</td>
+                  <td class="has-text-centered border-right">0/15</td>
+                </tr>
+
+                <tr class="tr-thick-top">
+                  <th class="border-right"><b>EgoZero</b></th>
+                  <td class="has-text-centered"><b>13/15</b></td>
+                  <td class="has-text-centered"><b>12/15</b></td>
+                  <td class="has-text-centered"><b>9/15</b></td>
+                  <td class="has-text-centered"><b>11/15</b></td>
+                  <td class="has-text-centered"><b>10/15</b></td>
+                  <td class="has-text-centered"><b>15/15</b></td>
+                  <td class="has-text-centered border-right"><b>9/15</b></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <p>Success rates for all baselines and ablations. All models were trained on the same 100 demonstrations per task, and evaluated on zero-shot object poses (unseen from training), cameras (iPhone vs Aria), and environment (robot workspace vs in-the-wild). Because of limited prior work in our exact zero-shot in-the-wild setting, we cite the closest work for each baseline.</p>
+
+    </div>
+
+    <!-- FTF Performance with Toggle Videos -->
+    <div class="content">
+      <h3 class="title is-4">Object Generalization</h3>
+      <div class="tabs is-centered is-boxed" id="aria-video-tabs">
+        <ul>
+          <li class="is-active" data-target="video-oven"><a>Open oven door</a></li>
+          <li data-target="video-bread"><a>Put bread in plate</a></li>
+          <li data-target="video-board"><a>Erase board</a></li>
+          <li data-target="video-fold"><a>Fold towel</a></li>
+        </ul>
+      </div>
+
+      <div id="aria-video-display">
+          <div class="video-content" id="video-oven">
+              <!-- Rollout 1 -->
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
+            <div class="columns is-vcentered">
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Human Demonstration</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/open_oven_human_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Training Object</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/open_oven_robot_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">New Object</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/open_oven_robot_generalization.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          <div class="video-content is-active" id="video-bread">
+              <!-- Rollout 1 -->
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
+            <div class="columns is-vcentered">
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Human Demonstration</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/pick_bread_human_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Training Object</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/pick_bread_robot_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">New Object</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/pick_bread_robot_generalization.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          <div class="video-content" id="video-board">
+              <!-- Rollout 1 -->
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
+            <div class="columns is-vcentered">
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Human Demonstration</p>
+                <video class="fixed-video" controls autoplay muted loop playsinline>
+                  <source src="./static/videos/erase_board_human_1.mp4" type="video/mp4">
+                </video> 
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Training Object</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/erase_board_robot_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">New Object</p>
+                <video class="fixed-video" controls autoplay muted loop playsinline>
+                  <source src="./static/videos/erase_board_robot_generalization.mp4" type="video/mp4">
+                </video> 
+              </div>
+            </div>
+
+          <div class="video-content" id="video-fold">
+              <!-- Rollout 1 -->
+            <!-- <h4 class="title is-5 has-text-centered" style="margin: 0.0001rem 0;">Rollout 1</h4> -->
+            <div class="columns is-vcentered">
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Human Demonstration</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/fold_towel_human_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">Training Object</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/fold_towel_robot_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column has-text-centered">
+                <p class="subtitle is-6">New Object</p>
+                <video controls autoplay muted loop playsinline width="100%">
+                  <source src="./static/videos/fold_towel_robot_generalization.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
       </div>
     </div>
 
